@@ -41,6 +41,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
+
+/* =Icon Font
+-------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'entyporegular';
+    src: url('entypo.eot');
+}
+
+@font-face {
+    font-family: 'entyporegular';
+    src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAVQAA8AAAAACEgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABWAAAABwAAAAcZssahUdERUYAAAF0AAAAHQAAACAAPwAET1MvMgAAAZQAAAA/AAAAYBYjNShjbWFwAAAB1AAAAFYAAAFyRqwkomN2dCAAAAIsAAAABAAAAAQARAURZ2FzcAAAAjAAAAAIAAAACAAAABBnbHlmAAACOAAAAK8AAADYwmYt0WhlYWQAAALoAAAALgAAADb+MH91aGhlYQAAAxgAAAAdAAAAJAc3B+tobXR4AAADOAAAADQAAABILnoAqmxvY2EAAANsAAAAEAAAACYBzAHEbWF4cAAAA3wAAAAfAAAAIABXAFVuYW1lAAADnAAAATwAAAKSOFhp0XBvc3QAAATYAAAAbgAAAM23xt8Jd2ViZgAABUgAAAAGAAAABunyUb8AAAABAAAAAMw9os8AAAAAzKfdRAAAAADN5ZpxeNpjYGRgYOADYgkGEGBiYARCQSBmAfMYAAUFAEQAAAB42mNgZrJgnMDAysDCasxyloGBYRaEZgJiRmMGNMCExHZxAhIODLwPGNgY/gGZLEwMGkCKEUmJAgMjAL7KB5AAeNpjYGBgZoBgGQZGBhDIAfIYwXwWhgAgLQCEzGAZXgUuBX2FeDWDBwz//0NFGJBEGP9/fcB8//79DTcfKAhCTUMBjGwMcGFGJiDBhK6AYdgDAMBPEa0AAABEBREAAQAB//8AD3jaY2BicGFgYEphDWVgZmBn0NvIyKBvs4mdheGt0UY21js2m5iZgEyGjcwgYVaQ8CZ2NsY/NpsYQeLGgoqCqoqCii5MCv9UGGf8y2AN/bXaheUsAwPQtDRGBmZjZgYGbgZxBmUGBkYjMRE2ZUUlNRMzY1MwqQgWEUQSZ2YQl5EX+TtLREFWHISZ0kB8hBiTsbyGPBCly2nKy2vK/TsDoYHWMTAywADQSktmAHyBJw0AeNpjYGRgYGBkcFwx/ePOeH6brwzyHAwgcPbprEJkmtmYNRRIcTAwgXgAYpELBwAAeNpjYGRgYGH6f4OBgYMBBJiNGRgZUIEQADxXAjAAAAB42mN6w+DCwcDAwLQSiFcxMLCGImjG40AMpBkeQzFQnFEQSHtDaJAc80yGNBagEAB8JwlLeNpjYGDQIQBTGHIAOL4DkXjaY2BkYGAQYlBhYGYAASYgZmQAiTkw6IEEAAjOAK0AeNqVkUtOAkEURU8JftAOwYlh4IAYphJsHRjiRBBjiFGDHT/DRtEQgSbY/jbgChwaF+BCjO7HBXi7KRRNTDSVen3u+9SrfgVkeCGBSaaANe0BGxypAY+RZstyggUOLCeZ59byONM8WJ5Q7ZPlSWo8W54iy7vlFFnjWJ4hb/KWHfGwVwbHtC3PkjbDXq/MmXvLbxTNIxX6NPEJaXEtyskT0NEK6HIZ64psmWMW2Wdd7FJkSbaqjJA7esqtq/acK9o6q88mu+zgsa38MiUpT74qR+yJ61Kjtbkf1S4FdYjWaNb3ilZ8N187VIXPqU7oxNUX8gWcyW5Id5XZ1LnRH/TV4UTqv/6beBXU4yve+IwWdJO/5fw+r0Ophu4cxBk5TTeagKd49CI1fbuxd1U2mn1J1pVdEQ/fY/kD55ZbcXjabc07DoJQGETh/6CC4gtZyeXyEEoTdStiYoyNhatX4E7pNN90xyKb9q3s/3IzImbMWRCTsGRFypoNW3bsyTiQx7fH59UXyft5d86dR/1wZCG9LGUla9nIo2xlJ09Bfw3WwaacOpeh9wMl8yZNAAAAAVG/6fEAAA==) format('woff'),
+         url('entypo.ttf') format('truetype'),
+         url('entypo.svg#entyporegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =Variables
+-------------------------------------------------------------- */
+
+
+
 /* =Important numbers
 -------------------------------------------------------------- */
 @line: 24;
@@ -81,8 +105,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {font-weight: normal; font-weight: 700;}
-
-
 
 /* =Colors
 -------------------------------------------------------------- */
@@ -134,7 +156,6 @@ body{-webkit-tap-highlight-color:@link}
 #access .menu {background: @navbg; display: table; width: 100%}
 #access ul {list-style:none; margin:0; padding-left:0}
 #access li {float:left; position:relative}
-#access a {display:block; line-height:3em; padding:0 1.5em; text-decoration:none}
 #access ul ul {box-shadow:0 3px 3px rgba(0,0,0,0.2); -moz-box-shadow:0 3px 3px rgba(0,0,0,0.2); -webkit-box-shadow:0 3px 3px rgba(0,0,0,0.2); display:none; float:left; position:absolute; top:3em; left:0; z-index:99999}
 #access ul ul ul {left:100%; top:0}
 #access ul ul a {background:@link; line-height:1em; padding:1em 1.5em; width:10em; height:auto}
@@ -206,13 +227,69 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, 
 
 
  nav {display:block; line-height:1em; overflow:hidden; text-transform: uppercase; font-size: 1.1em;}
- nav .nav-previous {float:left}
- nav .nav-next {float:right; text-align:right}
 #nav-above {display:none}
 #nav-below {margin:0 0 6em; line-height:3em;}
 #nav-below a {padding:1em; display: block; border: none; background: @navbg}
 #nav-below a:hover{background: @link}
 .page-link {margin:0 0 1.5em}
+
+/*! responsive-nav.js v1.0.14 by @viljamis */
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+#nav li {
+  width: 100%;
+  display: block;
+}
+
+.js #nav {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#nav.opened {
+  max-height: 9999px;
+}
+
+#nav-toggle {
+	font-family: "entyporegular";
+	font-size: 2em;
+	display: block;
+	position: fixed;
+	top: 0;
+	right:0;
+	z-index:9500;
+	cursor:pointer;
+	width: 1.5em;
+	height: 1.5em;
+	padding: .5em;
+	text-align: center;
+	vertical-align: center;
+}
+
+@media screen and (min-width: 40em) {
+  .js #nav {
+    position: relative;
+  }
+  .js #nav.closed {
+    max-height: none;
+  }
+  #nav-toggle {
+    display: none;
+  }
+}
+
+
 
 
 /* =Forms

@@ -40,7 +40,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.png"/>
-<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo( 'template_directory' ); ?>/img/icon.png"/>
+<!-- <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo( 'template_directory' ); ?>/img/icon.png"/> -->
 
 <!--[if lt IE 9]>
 <?php // This script enables structural HTML5 elements in old IE: http://code.google.com/p/html5shim/ ?>
@@ -49,7 +49,6 @@
 
 <script type="text/javascript" src="//use.typekit.net/lcd4nua.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -61,7 +60,9 @@
 			<hgroup>
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'ggswp' ); ?>"><?php _e( 'Skip to content', 'ggswp' ); ?></a></div>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'nav' ) ); ?>
+
+				<a href="#" id="nav-toggle">&#9776;</a>
 
 			</hgroup>
 		</nav><!-- #access -->
