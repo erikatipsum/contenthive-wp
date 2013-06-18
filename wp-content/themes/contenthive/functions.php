@@ -81,7 +81,7 @@ register_nav_menus( array(
 /**
  * Add default posts and comments RSS feed links to head
  */
-add_theme_support( 'automatic-feed-links' );
+// add_theme_support( 'automatic-feed-links' ); NOT CURRENTLY USING
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.

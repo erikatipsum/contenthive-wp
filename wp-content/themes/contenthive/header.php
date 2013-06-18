@@ -36,13 +36,9 @@
 
 <?php wp_head(); ?>
 
-<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-
 <?php // Please don't add "maximum-scale=1" here. It's bad for accessibility. ?>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.png"/>
 <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo( 'template_directory' ); ?>/img/icon.png"/>
 
@@ -51,22 +47,24 @@
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/html5.js"></script>
 <![endif]-->
 
+<script type="text/javascript" src="//use.typekit.net/lcd4nua.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
 	<header id="branding" role="banner">
-			<hgroup class="wrapper">
-				<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<p id="site-description"><?php bloginfo( 'description' ); ?></p>
-			</hgroup>
-
-			<nav id="access" role="navigation" class="wrapper">
-				<h1 class="section-heading"><?php _e( 'Main menu', 'ggswp' ); ?></h1>
+		<hgroup>
+			<h1 class="hide-text logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		</hgroup>
+		<nav id="access" role="navigation" class="wrapper">
+			<hgroup>
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'ggswp' ); ?>"><?php _e( 'Skip to content', 'ggswp' ); ?></a></div>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access -->
+
+			</hgroup>
+		</nav><!-- #access -->
 	</header><!-- #branding -->
 
 

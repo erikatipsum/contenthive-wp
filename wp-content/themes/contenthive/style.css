@@ -1,5 +1,5 @@
 /*
-Theme Name: Golden Grid System WP 
+Theme Name: Golden Grid System WP
 Theme URI: http://fthrwght.com/ggs
 Description: A fork of the Golden Grid System, GGSWP is a starter theme that uses a folding grid for responsive web design.
 Author: allancole
@@ -10,10 +10,10 @@ License: GNU General Public License
 License URI: license.md
 .
 
-To Do 
+To Do
 		- Get Started
 
-Versions 
+Versions
 0.0.03	Date: 10-03-2011
 		- Changed Primary sidebar titles to H3
 		- Removed Google Web fonts
@@ -28,7 +28,7 @@ Versions
 
 .
 
-Copyright (C) 2011 Feather Weight 
+Copyright (C) 2011 Feather Weight
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -44,12 +44,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -------------------------------------------------------------- */
 /* = Colours
 -------------------------------------------------------------- */
+/* ==========================================================================
+   Image Replacement for Logo
+   ========================================================================== */
+.hide-text {
+  letter-spacing: -1000em;
+  background-repeat: no-repeat;
+  display: block;
+}
+.hide-text a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* Just for Opera, but hide from MacIE */
+/*\*/html > body .hide-text {
+  letter-spacing: normal;
+  text-indent: -999em;
+  overflow: hidden;
+}
 /* =Globals
 -------------------------------------------------------------- */
 body {
-  font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
-  color: #626059;
-  background: #fffefa;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #0f0f0f;
+  background: #f3ca31;
+  letter-spacing: .04em;
 }
 h1,
 h2,
@@ -57,7 +79,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
+  font-weight: normal;
+  font-weight: 700;
 }
 /* =Colors
 -------------------------------------------------------------- */
@@ -71,27 +94,28 @@ code {
 a {
   text-decoration: none;
   color: #000000;
-  border-bottom: 0.125em solid #ffc300;
 }
 a:hover {
   border-bottom-color: #000000;
 }
 a:active {
-  border-bottom-color: #ffc300;
-  color: #ffc300;
+  border-bottom-color: #e4b60d;
+  color: #e4b60d;
 }
-.required, .post-edit-link, .comment-edit-link {
+.required,
+.post-edit-link,
+.comment-edit-link {
   color: #cc0033;
 }
 blockquote {
-  border-left: 0.125em solid #ffc300;
+  border-left: 0.125em solid #e4b60d;
 }
 ::selection {
-  background: #ffc300;
+  background: #e4b60d;
   color: #000000;
 }
 ::-moz-selection {
-  background: #ffc300;
+  background: #e4b60d;
   color: #000000;
 }
 img::selection {
@@ -101,7 +125,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  -webkit-tap-highlight-color: #ffc300;
+  -webkit-tap-highlight-color: #e4b60d;
 }
 /* =Structure
 -------------------------------------------------------------- */
@@ -124,17 +148,21 @@ body {
   display: block;
 }
 /* Increase the size of the content area for templates without sidebars */
-.full-width #content, .image-attachment #content, .error404 #content {
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
   margin: 0;
 }
 /* Text meant only for screen readers */
-.screen-reader-text, .section-heading {
+.screen-reader-text,
+.section-heading {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6,IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* Alignment */.alignleft {
+/* Alignment */
+.alignleft {
   display: inline;
   float: left;
 }
@@ -162,7 +190,7 @@ body {
   width: 100%;
 }
 #access .menu {
-  background: #e5e3dc;
+  background: #cf5c0f;
   display: table;
   width: 100%;
 }
@@ -197,17 +225,18 @@ body {
   top: 0;
 }
 #access ul ul a {
-  background: #ffc300;
+  background: #e4b60d;
   line-height: 1em;
   padding: 1em 1.5em;
   width: 10em;
   height: auto;
 }
-#access li:hover > a, #access ul ul:hover > a {
-  background: #ffc300;
+#access li:hover > a,
+#access ul ul:hover > a {
+  background: #e4b60d;
 }
 #access ul ul a:hover {
-  background: #ffc300;
+  background: #e4b60d;
 }
 #access ul li:hover > ul {
   display: block;
@@ -251,7 +280,8 @@ article .entry-content {
   float: left;
   width: 33%;
 }
-.error404 .widget .widgettitle, .error404 .widget ul {
+.error404 .widget .widgettitle,
+.error404 .widget ul {
   margin-right: 1em;
 }
 .error404 .widget_tag_cloud {
@@ -260,8 +290,9 @@ article .entry-content {
   width: 100%;
 }
 /* Notices */
-.post .notice, .error404 #searchform {
-  background: #e5e3dc;
+.post .notice,
+.error404 #searchform {
+  background: #cf5c0f;
   display: block;
   padding: 1.5em 1em;
 }
@@ -287,7 +318,7 @@ article .entry-content {
   margin-bottom: 1.5em;
 }
 .image-attachment .entry-content .entry-attachment {
-  background: #e5e3dc;
+  background: #cf5c0f;
   margin: 1.5em 0;
   padding: 1em;
   text-align: center;
@@ -344,19 +375,21 @@ img.size-medium,
 }
 /* =Navigation
 -------------------------------------------------------------- */
-#content nav {
+nav {
   display: block;
   line-height: 1em;
   overflow: hidden;
+  text-transform: uppercase;
+  font-size: 1.1em;
 }
-#content nav .nav-previous {
+nav .nav-previous {
   float: left;
 }
-#content nav .nav-next {
+nav .nav-next {
   float: right;
   text-align: right;
 }
-#content #nav-above {
+#nav-above {
   display: none;
 }
 #nav-below {
@@ -367,10 +400,10 @@ img.size-medium,
   padding: 1em;
   display: block;
   border: none;
-  background: #e5e3dc;
+  background: #cf5c0f;
 }
 #nav-below a:hover {
-  background: #ffc300;
+  background: #e4b60d;
 }
 .page-link {
   margin: 0 0 1.5em;
@@ -383,7 +416,8 @@ img.size-medium,
 #searchform input#s {
   width: 60%;
 }
-input[type=text], input#s {
+input[type=text],
+input#s {
   margin: 0 1em 0 0;
   width: 60%;
 }
@@ -442,7 +476,7 @@ textarea {
 #comments li.comment .children {
   margin-left: 6.25%;
   padding-left: 6.25%;
-  border-left: 0.125em solid #ffc300;
+  border-left: 0.125em solid #e4b60d;
 }
 #respond input[type=text] {
   display: block;
