@@ -4,32 +4,38 @@
  * @subpackage GGS WP
  */
 ?>
-			<div id="primary" class="widget-area wrapper" role="complementary">
+			<div id="primary" class="primary-sidebar" role="complementary">
 				<?php if ( ! dynamic_sidebar( 'primary-sidebar-1' ) ) : ?>
 
+					<?php if(get_field('sidebar_items', 36)): ?>
 
+						<ul>
+
+						<?php while(has_sub_field('sidebar_items', 36)): ?>
+
+							<li>
+
+								<figure>
+
+									<a href="<?php the_sub_field('page_link'); ?>">
+
+										<img src="<?php the_sub_field('image'); ?>">
+
+										<figcaption class="<?php the_sub_field('caption_alignment'); ?>">
+											<?php the_sub_field('image_caption'); ?>
+										</figcaption>
+
+									</a>
+
+								</figure>
+
+							</li>
+
+						<?php endwhile; ?>
+
+						</ul>
+
+					<?php endif; ?>
 
 				<?php endif; // end sidebar widget area ?>
 			</div><!-- #primary .widget-area -->
-
-		<?php
-			/* A sidebar in the footer? Yep. You can can customize
-			 * your footer with TWO columns of widgets.
-			 */
-			get_sidebar( 'secondary' );
-		?>
-
-		<?php
-			/* Another sidebar in the footer? Yep. You can can customize
-			 * your footer with three columns of widgets.
-			 */
-			get_sidebar( 'tertiary' );
-		?>
-
-		<?php
-			/* Another sidebar in the footer? Yep. You can can customize
-			 * your footer with FOUR columns of widgets.
-			 */
-			get_sidebar( 'quarternary' );
-		?>
-

@@ -53,19 +53,31 @@
 
 <body <?php body_class(); ?>>
 	<header id="branding" role="banner">
-		<hgroup>
-			<h1 class="hide-text logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</hgroup>
-		<nav id="access" role="navigation" class="wrapper">
+		<nav id="access" role="navigation">
 			<hgroup>
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'ggswp' ); ?>"><?php _e( 'Skip to content', 'ggswp' ); ?></a></div>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id' => 'nav' ) ); ?>
 
-				<a href="#" id="nav-toggle">&#9776;</a>
+
 
 			</hgroup>
 		</nav><!-- #access -->
+
+		<section class="header_bar">
+
+			<h1 class="hide-text logo">
+
+				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<?php bloginfo( 'name' ); ?>
+				</a>
+
+			</h1>
+
+			<a href="#" id="nav-toggle">&#9776;</a>
+
+		</section>
+
 	</header><!-- #branding -->
 
 

@@ -104,101 +104,6 @@ function ggstheme_widgets_init() {
 		'description' => __( 'The main sidebar for the right side column', 'ggswp' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Secondary
-	register_sidebar( array(
-		'name' => __( 'Secondary Sidebar Area One', 'ggswp' ),
-		'id' => 'secondary-sidebar-1',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Secondary Sidebar Area Two', 'ggswp' ),
-		'id' => 'secondary-sidebar-2',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Tertiary
-	register_sidebar( array(
-		'name' => __( 'Tertiary Sidebar Area One', 'ggswp' ),
-		'id' => 'tertiary-sidebar-1',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Tertiary Sidebar Area Two', 'ggswp' ),
-		'id' => 'tertiary-sidebar-2',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Tertiary Sidebar Area Three', 'ggswp' ),
-		'id' => 'tertiary-sidebar-3',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Quaternary
-	register_sidebar( array(
-		'name' => __( 'Quaternary Sidebar Area One', 'ggswp' ),
-		'id' => 'quaternary-sidebar-1',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Quaternary Sidebar Area Two', 'ggswp' ),
-		'id' => 'quaternary-sidebar-2',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Quaternary Sidebar Area Three', 'ggswp' ),
-		'id' => 'quaternary-sidebar-3',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Quaternary Sidebar Area Four', 'ggswp' ),
-		'id' => 'quaternary-sidebar-4',
-		'description' => __( 'An optional widget area for your site footer', 'ggswp' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
 	) );
 
 }
@@ -237,6 +142,9 @@ function ggs_enqueue_scripts() {
 		if ( is_user_logged_in() && (current_user_can('edit_others_posts') == TRUE) ) {
 			wp_enqueue_script('ggs', TEMPLATE_DIR . '/js/ggs.js', array('jquery'), '1.01' );
 		}
+		//wp_enqueue_script('modernizr-svg', TEMPLATE_DIR . '/js/modernizr-svg.js', null);
+		wp_enqueue_script('match-media', TEMPLATE_DIR . '/js/matchmedia.js', null);
+		wp_enqueue_script('picturefill', TEMPLATE_DIR . '/js/picturefill.js', null);
 	}
 }
 add_action('wp_print_scripts', 'ggs_enqueue_scripts');

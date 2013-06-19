@@ -42,28 +42,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 
-/* =Icon Font
+/* =Icon Fonts
 -------------------------------------------------------------- */
 
 @font-face {
     font-family: 'entyporegular';
-    src: url('entypo.eot');
+    src: url('fonts/entypo/entypo.eot');
 }
 
 @font-face {
     font-family: 'entyporegular';
-    src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAVQAA8AAAAACEgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABWAAAABwAAAAcZssahUdERUYAAAF0AAAAHQAAACAAPwAET1MvMgAAAZQAAAA/AAAAYBYjNShjbWFwAAAB1AAAAFYAAAFyRqwkomN2dCAAAAIsAAAABAAAAAQARAURZ2FzcAAAAjAAAAAIAAAACAAAABBnbHlmAAACOAAAAK8AAADYwmYt0WhlYWQAAALoAAAALgAAADb+MH91aGhlYQAAAxgAAAAdAAAAJAc3B+tobXR4AAADOAAAADQAAABILnoAqmxvY2EAAANsAAAAEAAAACYBzAHEbWF4cAAAA3wAAAAfAAAAIABXAFVuYW1lAAADnAAAATwAAAKSOFhp0XBvc3QAAATYAAAAbgAAAM23xt8Jd2ViZgAABUgAAAAGAAAABunyUb8AAAABAAAAAMw9os8AAAAAzKfdRAAAAADN5ZpxeNpjYGRgYOADYgkGEGBiYARCQSBmAfMYAAUFAEQAAAB42mNgZrJgnMDAysDCasxyloGBYRaEZgJiRmMGNMCExHZxAhIODLwPGNgY/gGZLEwMGkCKEUmJAgMjAL7KB5AAeNpjYGBgZoBgGQZGBhDIAfIYwXwWhgAgLQCEzGAZXgUuBX2FeDWDBwz//0NFGJBEGP9/fcB8//79DTcfKAhCTUMBjGwMcGFGJiDBhK6AYdgDAMBPEa0AAABEBREAAQAB//8AD3jaY2BicGFgYEphDWVgZmBn0NvIyKBvs4mdheGt0UY21js2m5iZgEyGjcwgYVaQ8CZ2NsY/NpsYQeLGgoqCqoqCii5MCv9UGGf8y2AN/bXaheUsAwPQtDRGBmZjZgYGbgZxBmUGBkYjMRE2ZUUlNRMzY1MwqQgWEUQSZ2YQl5EX+TtLREFWHISZ0kB8hBiTsbyGPBCly2nKy2vK/TsDoYHWMTAywADQSktmAHyBJw0AeNpjYGRgYGBkcFwx/ePOeH6brwzyHAwgcPbprEJkmtmYNRRIcTAwgXgAYpELBwAAeNpjYGRgYGH6f4OBgYMBBJiNGRgZUIEQADxXAjAAAAB42mN6w+DCwcDAwLQSiFcxMLCGImjG40AMpBkeQzFQnFEQSHtDaJAc80yGNBagEAB8JwlLeNpjYGDQIQBTGHIAOL4DkXjaY2BkYGAQYlBhYGYAASYgZmQAiTkw6IEEAAjOAK0AeNqVkUtOAkEURU8JftAOwYlh4IAYphJsHRjiRBBjiFGDHT/DRtEQgSbY/jbgChwaF+BCjO7HBXi7KRRNTDSVen3u+9SrfgVkeCGBSaaANe0BGxypAY+RZstyggUOLCeZ59byONM8WJ5Q7ZPlSWo8W54iy7vlFFnjWJ4hb/KWHfGwVwbHtC3PkjbDXq/MmXvLbxTNIxX6NPEJaXEtyskT0NEK6HIZ64psmWMW2Wdd7FJkSbaqjJA7esqtq/acK9o6q88mu+zgsa38MiUpT74qR+yJ61Kjtbkf1S4FdYjWaNb3ilZ8N187VIXPqU7oxNUX8gWcyW5Id5XZ1LnRH/TV4UTqv/6beBXU4yve+IwWdJO/5fw+r0Ophu4cxBk5TTeagKd49CI1fbuxd1U2mn1J1pVdEQ/fY/kD55ZbcXjabc07DoJQGETh/6CC4gtZyeXyEEoTdStiYoyNhatX4E7pNN90xyKb9q3s/3IzImbMWRCTsGRFypoNW3bsyTiQx7fH59UXyft5d86dR/1wZCG9LGUla9nIo2xlJ09Bfw3WwaacOpeh9wMl8yZNAAAAAVG/6fEAAA==) format('woff'),
-         url('entypo.ttf') format('truetype'),
-         url('entypo.svg#entyporegular') format('svg');
+    src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAVQAA8AAAAACEgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABWAAAABwAAAAcZssahUdERUYAAAF0AAAAHQAAACAAPwAET1MvMgAAAZQAAAA/AAAAYBYjNShjbWFwAAAB1AAAAFYAAAFyRqwkomN2dCAAAAIsAAAABAAAAAQARAURZ2FzcAAAAjAAAAAIAAAACAAAABBnbHlmAAACOAAAAK8AAADYwmYt0WhlYWQAAALoAAAALgAAADb+MH91aGhlYQAAAxgAAAAdAAAAJAc3B+tobXR4AAADOAAAADQAAABILnoAqmxvY2EAAANsAAAAEAAAACYBzAHEbWF4cAAAA3wAAAAfAAAAIABXAFVuYW1lAAADnAAAATwAAAKSOFhp0XBvc3QAAATYAAAAbgAAAM23xt8Jd2ViZgAABUgAAAAGAAAABunyUb8AAAABAAAAAMw9os8AAAAAzKfdRAAAAADN5ZpxeNpjYGRgYOADYgkGEGBiYARCQSBmAfMYAAUFAEQAAAB42mNgZrJgnMDAysDCasxyloGBYRaEZgJiRmMGNMCExHZxAhIODLwPGNgY/gGZLEwMGkCKEUmJAgMjAL7KB5AAeNpjYGBgZoBgGQZGBhDIAfIYwXwWhgAgLQCEzGAZXgUuBX2FeDWDBwz//0NFGJBEGP9/fcB8//79DTcfKAhCTUMBjGwMcGFGJiDBhK6AYdgDAMBPEa0AAABEBREAAQAB//8AD3jaY2BicGFgYEphDWVgZmBn0NvIyKBvs4mdheGt0UY21js2m5iZgEyGjcwgYVaQ8CZ2NsY/NpsYQeLGgoqCqoqCii5MCv9UGGf8y2AN/bXaheUsAwPQtDRGBmZjZgYGbgZxBmUGBkYjMRE2ZUUlNRMzY1MwqQgWEUQSZ2YQl5EX+TtLREFWHISZ0kB8hBiTsbyGPBCly2nKy2vK/TsDoYHWMTAywADQSktmAHyBJw0AeNpjYGRgYGBkcFwx/ePOeH6brwzyHAwgcPbprEJkmtmYNRRIcTAwgXgAYpELBwAAeNpjYGRgYGH6f4OBgYMBBJiNGRgZUIEQADxXAjAAAAB42mN6w+DCwcDAwLQSiFcxMLCGImjG40AMpBkeQzFQnFEQSHtDaJAc80yGNBagEAB8JwlLeNpjYGDQIQBTGHIAOL4DkXjaY2BkYGAQYlBhYGYAASYgZmQAiTkw6IEEAAjOAK0AeNqVkUtOAkEURU8JftAOwYlh4IAYphJsHRjiRBBjiFGDHT/DRtEQgSbY/jbgChwaF+BCjO7HBXi7KRRNTDSVen3u+9SrfgVkeCGBSaaANe0BGxypAY+RZstyggUOLCeZ59byONM8WJ5Q7ZPlSWo8W54iy7vlFFnjWJ4hb/KWHfGwVwbHtC3PkjbDXq/MmXvLbxTNIxX6NPEJaXEtyskT0NEK6HIZ64psmWMW2Wdd7FJkSbaqjJA7esqtq/acK9o6q88mu+zgsa38MiUpT74qR+yJ61Kjtbkf1S4FdYjWaNb3ilZ8N187VIXPqU7oxNUX8gWcyW5Id5XZ1LnRH/TV4UTqv/6beBXU4yve+IwWdJO/5fw+r0Ophu4cxBk5TTeagKd49CI1fbuxd1U2mn1J1pVdEQ/fY/kD55ZbcXjabc07DoJQGETh/6CC4gtZyeXyEEoTdStiYoyNhatX4E7pNN90xyKb9q3s/3IzImbMWRCTsGRFypoNW3bsyTiQx7fH59UXyft5d86dR/1wZCG9LGUla9nIo2xlJ09Bfw3WwaacOpeh9wMl8yZNAAAAAVG/6fEAAA==) format('woff'),
+         url('fonts/entypo/entypo.ttf') format('truetype'),
+         url('fonts/entypo/entypo.svg#entyporegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 
+
 /* =Variables
 -------------------------------------------------------------- */
-
-
+@logo_mark_color: url("img/logo-mark-color-small.png");
+@logo_mark_color_2x: url("img/logo-mark-color-small@2x.png");
+@logo_color: url("img/logo-color.png");
+@logo_white: url("img/logo-white.png");
+@footer_bg_small: url("img/honeycomb-small.jpg");
 
 /* =Important numbers
 -------------------------------------------------------------- */
@@ -120,6 +124,8 @@ blockquote {border-left: 2/@em solid @link}
 img::selection{background:transparent}
 img::-moz-selection{background:transparent}
 body{-webkit-tap-highlight-color:@link}
+img{-webkit-tap-highlight-color:transparent;}
+
 
 /* =Structure
 -------------------------------------------------------------- */
@@ -147,12 +153,41 @@ body{-webkit-tap-highlight-color:@link}
 
 /* =Header
 -------------------------------------------------------------- */
+
+header {
+	position: relative;
+	height: 5em;
+}
+
+.logo {
+	background-image: @logo_mark_color;
+	width: 1.6em;
+	height: auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0.2em 0em .5em 0.88em;
+}
+
+.logo>a {
+	width: 100%;
+	height: 100%;
+}
+
+.header_bar {
+	background-color: @navbg;
+	height: 3em;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
 #site-title {}
 #site-description {margin: 0 0 3em}
 
 /* =Menu
 -------------------------------------------------------------- */
-#access {display:block; float:left; margin:0 0 3em; width:100%}
+#access {display:block; float:left; margin:3em 0 3em; width:100%}
 #access .menu {background: @navbg; display: table; width: 100%}
 #access ul {list-style:none; margin:0; padding-left:0}
 #access li {float:left; position:relative}
@@ -166,7 +201,7 @@ body{-webkit-tap-highlight-color:@link}
 
 /* =Content
 -------------------------------------------------------------- */
-#main article {margin-bottom: 6em}
+#main article {margin-bottom: 2.618em;}
 #main p {margin-bottom: 1.5em}
 
 /* Posts */
@@ -226,7 +261,15 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, 
 -------------------------------------------------------------- */
 
 
- nav {display:block; line-height:1em; overflow:hidden; text-transform: uppercase; font-size: 1.1em;}
+ #nav {
+ 	display:block;
+ 	line-height:1em;
+ 	overflow:hidden;
+ 	text-transform: uppercase;
+ 	font-size: 1.1em;
+
+ }
+
 #nav-above {display:none}
 #nav-below {margin:0 0 6em; line-height:3em;}
 #nav-below a {padding:1em; display: block; border: none; background: @navbg}
@@ -246,15 +289,44 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, 
 #nav li {
   width: 100%;
   display: block;
+  padding: 0em;
+  cursor: pointer;
+}
+
+
+
+#nav li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: .875em .8em .875em 1.3em;
+}
+
+#nav li a:hover {
+	background-color: @link;
+}
+
+#nav li a:active {
+	background-color: @navbg;
+}
+
+#nav li:first-child {
+	margin-top: 0em;
+}
+
+#nav li:last-child a {
+	padding-bottom: 1.1em;
 }
 
 .js #nav {
   clip: rect(0 0 0 0);
-  max-height: 0;
+  max-height: none;
   position: absolute;
   display: block;
   overflow: hidden;
   zoom: 1;
+  width: 100%;
+  top: 0;
 }
 
 #nav.opened {
@@ -263,18 +335,18 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, 
 
 #nav-toggle {
 	font-family: "entyporegular";
-	font-size: 2em;
+	font-size: 4em;
 	display: block;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right:0;
 	z-index:9500;
 	cursor:pointer;
-	width: 1.5em;
-	height: 1.5em;
-	padding: .5em;
+	width: 0.4em;
+	height: .3em;
+	padding: 0.22em .35em .25em 1.8em;
 	text-align: center;
-	vertical-align: center;
+	vertical-align: middle;
 }
 
 @media screen and (min-width: 40em) {
@@ -303,41 +375,222 @@ textarea{width:80%}
 /* Class for labelling required form items */
 .required {color:@required}
 
-/* =Comments
--------------------------------------------------------------- */
-#comments {}
-#comments h3 {font-size: 1.5em;line-height: 2em}
-#comments .commentlist {margin-bottom: 6em}
-#comments .wrapper {width: inherit;}
-#comments article.comment {margin-bottom: 3em}
-#comments article.comment header {display: table; width: 100%; clear: both}
-#comments article.comment .comment-author {font-size: 1.5em; width: 50%; float:left}
-#comments article.comment cite {font-style: normal}
-#comments article.comment .comment-meta {padding: 0.75em 0; width: 50%; text-align: right; float:right}
-#comments article.comment .comment-author img {vertical-align: middle;}
-#comments article.comment .comment-content {margin: 0 0 1.5em; display:block; clear: both}
-#comments article.comment .comment-content p {margin-bottom: 1em;}
-#comments li.comment .children {margin-left: 6.25%; padding-left: 6.25%; border-left: 2/@em solid @link}
-
-#respond input[type=text]{display:block; width:60%}
-#respond .comment-form-comment {margin-bottom: 0}
-#respond textarea{display:block; margin:0 0 1.5em; width:100%}
-#respond .form-allowed-tags{clear:both; width:100%; font-size: 0.75em}
-#respond .form-allowed-tags code {display:block}
 
 /* =Widgets & Asides
 -------------------------------------------------------------- */
-.widget-area {color:@aside}
-.widget {display:block; margin: 0 0 3em}
-.widget-area .widget_search{overflow:hidden}
-.widget-area .widget_search input{float:left; font-size: .875em}
-#primary .widget h3 {margin:0; font-size: 1.5em; line-height: 2em}
+
+.primary-sidebar {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: none;
+}
+
+.primary-sidebar ul {
+	display: block;
+	position: relative;
+	float: left;
+	clear: none;
+	width: 100%;
+}
+.primary-sidebar ul li {
+	display: block;
+	position: relative;
+	max-width: 390px;
+	max-height: 167px;
+	float: left;
+	clear: none;
+	width: 100%;
+	height: auto;
+	padding: .87em 0em;
+}
+
+.primary-sidebar ul li figure {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.primary-sidebar ul li figure a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.primary-sidebar ul li figure a figcaption {
+	opacity: 1;
+	display: block;
+	position: absolute;
+	top: .1em;
+	left: .5em;
+	color: white;
+	font-family: "futura-pt", sans-serif;
+	font-size: .8em;
+	font-weight: 700;
+	font-style: normal;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+	text-align: left;
+	-webkit-transition: 300ms all ease-in-out;
+	-moz-transition: 300ms all ease-in-out;
+	-o-transition: 300ms all ease-in-out;
+	-ms-transition: 300ms all ease-in-out;
+	transition: 300ms all ease-in-out;
+
+}
+
+.primary-sidebar ul li figure a figcaption.top-right {
+	top: .1em;
+	right: .5em;
+	left: auto;
+	text-align: right;
+}
+
+
+.primary-sidebar ul li figure a figcaption.bottom-left {
+	bottom: .3em;
+	top: auto;
+	left: .5em;
+	text-align: left;
+}
+
+.primary-sidebar ul li figure a figcaption.bottom-right {
+	bottom: .3em;
+	top: auto;
+	right: .5em;
+	left: auto;
+	text-align: right;
+}
+
+.primary-sidebar ul li figure img {
+	opacity: 0.5;
+	-webkit-transition: 300ms all ease-in-out;
+	-moz-transition: 300ms all ease-in-out;
+	-o-transition: 300ms all ease-in-out;
+	-ms-transition: 300ms all ease-in-out;
+	transition: 300ms all ease-in-out;
+}
+
+.primary-sidebar ul li:hover figure a img {
+	opacity: 1;
+	-webkit-transition: 300ms all ease-in-out;
+	-moz-transition: 300ms all ease-in-out;
+	-o-transition: 300ms all ease-in-out;
+	-ms-transition: 300ms all ease-in-out;
+	transition: 300ms all ease-in-out;
+}
+
+
+.primary-sidebar ul li:hover figure a figcaption {
+	opacity: 0;
+	-webkit-transition: 300ms all ease-in-out;
+	-moz-transition: 300ms all ease-in-out;
+	-o-transition: 300ms all ease-in-out;
+	-ms-transition: 300ms all ease-in-out;
+	transition: 300ms all ease-in-out;
+}
+
 
 /* =Footer
 -------------------------------------------------------------- */
-#colophon {padding:1.5em 0 3em; color:@aside}
-#colophon p {padding-bottom: 1em}
-#copyright p {font-size: 0.75em;}
+footer {
+	background-color: @navbg;
+	position: relative;
+	display: block;
+	float: left;
+	clear: none;
+	width: 100%;
+	text-align: center;
+	margin-top: 2em;
+}
 
+footer ul, footer address, footer h3 {
+	padding: 0 5.555555555%;
+	margin: 2em 0;
+}
+
+footer h3 {
+	color: white;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+}
+
+footer address {
+	font-weight: 400;
+	font-style: normal;
+}
+
+.footer_logo {
+	background-image: @logo_mark_color;
+	width: 2em;
+	height: 1.73em;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0.2em auto 1.5em auto;
+	position: relative;
+}
+
+.footer-nav {
+ 	text-align: center;
+ 	line-height:1em;
+ 	overflow:hidden;
+ 	text-transform: uppercase;
+ 	font-size: 1.1em;
+}
+
+#footer-nav-ul {
+	margin: 0;
+	padding: 0;
+}
+
+
+#footer-nav-ul li {
+	margin: 0;
+	display: block;
+	cursor: pointer;
+}
+
+#footer-nav-ul li a {
+	padding: .9em;
+	display: block;
+}
+
+
+#footer-nav-ul li a:hover {
+	background-color: @link;
+}
+
+#footer-nav-ul li a:active {
+	background-color: @navbg;
+}
+
+#footer-nav-ul li:first-child {
+	margin-top: 0em;
+}
+
+#footer-nav-ul li:last-child a {
+	margin-bottom: 1.3em;
+}
+
+
+
+/* =Retina Queries
+-------------------------------------------------------------- */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .logo, .footer_logo {
+  	background-image: @logo_mark_color_2x;
+  }
+
+}
 
 

@@ -53,6 +53,21 @@ tr td{border-top:1px solid lightgray;padding: 0.5em}
 figure{ position:relative; }
 figure img, figure object, figure embed, figure video{ max-width:100%;  display:block; }
 img{ border:0;  -ms-interpolation-mode:bicubic; }
+
+/*
+*
+*  Viewport declarations
+*
+*/
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+
+
 /*
 *
 *Zoomable baseline grid
@@ -74,8 +89,7 @@ body{ /* 16px / 24px */ font-size:1em;  line-height:1.5em; }
 *  5.55555% | %  25  50  75  100 | 5.55555%
 *
 */
-
-header, #main, footer{ margin:0 5.555555555555555%; }
+#main{ margin:0 5.555555555555555%; }
 #container, #secondary, #tertiary, #quarternary, #main #container.full-width {width: 100%; float: none; clear: both}
 h1, h2{ margin:0.9230769230769231em 0 1.3846153846153846em; }
 h2{ font-weight:normal; }
