@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Homepage Variables
+   ========================================================================== */
+
+@index_bg: url("img/bee-trail.png");
+@logo_mark_color: url("img/logo-mark-color-small.png");
+@logo_mark_color_2x: url("img/logo-mark-color-small@2x.png");
+@tagline_small: url("img/tagline-small.png");
+@tagline_small_2x: url("img/tagline-small@2x.png");
+
+/* ==========================================================================
+   Homepage styles
+   ========================================================================== */
+
+// body {
+// 	background-image: @index_bg;
+// 	background-size: 1800px;
+// 	background-repeat: no-repeat;
+// 	background-position: -500px 0%;
+// }
+
+.logo {
+	background-image: @logo_mark_color;
+	width: 1.6em;
+	height: auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0.2em 0em .5em 0.88em;
+}
+
+.hero {
+	display: block;
+	max-width: 100%;
+}
+
+.hero .sml>img {
+	max-width: 100%;
+}
+
+.hero .lrg>img {
+	max-width: 100%;
+}
+
+.tagline {
+	background-image: @tagline_small;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	margin: 0.5em 0em 1.2em;
+	height: 0;
+	padding-bottom: 7%;
+}
+
+/* =Retina Queries
+-------------------------------------------------------------- */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .logo, .footer_logo {
+  	background-image: @logo_mark_color_2x;
+  }
+
+  .tagline {
+  	background-image: @tagline_small_2x;
+  }
+
+}
+
+

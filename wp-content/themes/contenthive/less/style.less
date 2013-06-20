@@ -108,7 +108,33 @@ body {
 
 }
 
-h1, h2, h3, h4, h5, h6 {font-weight: normal; font-weight: 700;}
+h1, h2, h3, h4, h5, h6 {font-weight: 400;}
+
+h2 {
+	font-family: "futura-pt", sans-serif;
+	font-size: 2.5em;
+	margin: .6em 0;
+}
+
+h3 {
+	font-family: "adobe-jenson-pro-display";
+	font-size: 1.7em;
+	letter-spacing: 0.038em;
+}
+
+h4 {
+	font-family: "adobe-jenson-pro-display", seif;
+	font-size: 1.2em;
+	padding-right: 25%;
+	margin: 0em 0em 1.7em 0em;
+	line-height: 1em;
+}
+
+h5 {
+	font-weight: 700;
+	letter-spacing: .06em;
+}
+
 
 /* =Colors
 -------------------------------------------------------------- */
@@ -160,13 +186,13 @@ header {
 }
 
 .logo {
-	background-image: @logo_mark_color;
-	width: 1.6em;
+	background-image: @logo_color;
+	width: 5.6em;
 	height: auto;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-	margin: 0.2em 0em .5em 0.88em;
+	margin: 0.23em 0em .5em 0.88em;
 }
 
 .logo>a {
@@ -240,7 +266,7 @@ article .entry-content {margin-bottom: 0}
 /* =Images
 -------------------------------------------------------------- */
 a img{border:none}
-p img{margin-bottom:0.5em; /* a small bottom margin prevents content floating under images */}
+p img{margin-bottom:0.5em; max-width: 100%; height: auto; /* a small bottom margin prevents content floating under images */}
 /*
 Resize images to fit the main content area.
 - Applies only to images uploaded via WordPress by targeting size-* classes.

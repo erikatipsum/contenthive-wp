@@ -93,7 +93,7 @@ body{ /* 16px / 24px */ font-size:1em;  line-height:1.5em; }
 #container, #secondary, #tertiary, #quarternary, #main #container.full-width {width: 100%; float: none; clear: both}
 h1, h2{ margin:0.9230769230769231em 0 1.3846153846153846em; }
 h2{ font-weight:normal; }
-h3{ margin:1.5em 0 1.5em; }
+h3{ margin:1.5em 0 0em; }
 
 /*
 *  Simple elastic gutters
