@@ -121,7 +121,7 @@ function ggs_enqueue_styles() {
 		// wp_enqueue_style('ggs', TEMPLATE_DIR . '/less/style.less', null, '', 'screen, projection');
 		wp_enqueue_style('ggs-base', TEMPLATE_DIR . '/css/style.ggs.css', null, '', 'screen, projection');
 		wp_enqueue_style('ggs-theme', TEMPLATE_DIR . '/style.css', null, '', 'screen, projection');
-		if ( is_page(7) ) {// If it's the homepage, load home.css
+		if ( is_page(7) ) {// If it's the homepage, load home.css too.
 			wp_enqueue_style('ggs-theme-index', TEMPLATE_DIR . '/home.css', null, '', 'screen, projection');
 		}
 	}
@@ -156,6 +156,7 @@ function enqueue_footer_scripts() {
 	global $post, $shortname;
 
 	if ( !is_admin() ) { // Is this necessary?
+		wp_enqueue_script('widow-tamer', TEMPLATE_DIR . '/js/widowtamer-min.js', null);
 		wp_enqueue_script('responsive-nav', TEMPLATE_DIR . '/js/responsive-nav.min.js', null);
 		wp_enqueue_script('main-js', TEMPLATE_DIR . '/js/main.js', null);
 	}

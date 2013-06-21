@@ -1,3 +1,7 @@
+
+// Responsive Nav adapted from responsive-nav.com
+
+
 var navigation = responsiveNav("#nav", { // Selector: The ID of the wrapper
     animate: true, // Boolean: Use CSS3 transitions, true or false
     transition: 200, // Integer: Speed of the transition, in milliseconds
@@ -9,4 +13,19 @@ var navigation = responsiveNav("#nav", { // Selector: The ID of the wrapper
     init: function(){}, // Function: Init callback
     open: function(){}, // Function: Open callback
     close: function(){} // Function: Close callback
+});
+
+
+wt.fix({
+	elements: 'h3, h4, h5',
+	chars: 14,
+	method: 'nbsp',
+	event: 'resize'
+});
+
+wt.fix({
+	elements: 'p',
+	chars: 25,
+	method: 'padding-right',
+	event: 'resize'
 });

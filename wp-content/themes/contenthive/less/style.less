@@ -145,6 +145,10 @@ a:active{border-bottom-color:@link; color:@link}
 .required, .post-edit-link, .comment-edit-link {color:@required}
 blockquote {border-left: 2/@em solid @link}
 
+p a{text-decoration:none; color:@navbg;}
+p a:hover{color:@navbg; border-bottom-color: @link; border-bottom-width: 1px; border-bottom-style: solid;}
+p a:active{border-bottom-color:@link; color:@emphasis}
+
 ::selection{background:@link; color:@emphasis}
 ::-moz-selection{background:@link; color:@emphasis}
 img::selection{background:transparent}
@@ -532,7 +536,7 @@ footer {
 	margin-top: 2em;
 }
 
-footer ul, footer address, footer h3 {
+footer ul, footer address {
 	padding: 0 5.555555555%;
 	margin: 2em 0;
 }
@@ -540,6 +544,11 @@ footer ul, footer address, footer h3 {
 footer h3 {
 	color: white;
 	text-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+	margin: 0;
+}
+
+footer h3:first-child {
+	margin-top: 2em;
 }
 
 footer address {

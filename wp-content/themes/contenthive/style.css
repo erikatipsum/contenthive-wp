@@ -144,6 +144,20 @@ a:active {
 blockquote {
   border-left: 0.125em solid #e4b60d;
 }
+p a {
+  text-decoration: none;
+  color: #cf5c0f;
+}
+p a:hover {
+  color: #cf5c0f;
+  border-bottom-color: #e4b60d;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+p a:active {
+  border-bottom-color: #e4b60d;
+  color: #000000;
+}
 ::selection {
   background: #e4b60d;
   color: #000000;
@@ -663,14 +677,17 @@ footer {
   margin-top: 2em;
 }
 footer ul,
-footer address,
-footer h3 {
+footer address {
   padding: 0 5.555555555%;
   margin: 2em 0;
 }
 footer h3 {
   color: white;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+footer h3:first-child {
+  margin-top: 2em;
 }
 footer address {
   font-weight: 400;

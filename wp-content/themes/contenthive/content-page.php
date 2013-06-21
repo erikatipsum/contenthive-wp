@@ -25,6 +25,6 @@
 
 		<h2 class="hide-text tagline">Brand Placemaking for a social media ecosystem</h2>
 
-		<?php the_field("main_intro_copy"); ?>
+		<p><?php the_field("main_intro_copy"); ?></p>
 
 </article><!-- #post-<?php the_ID(); ?> -->
