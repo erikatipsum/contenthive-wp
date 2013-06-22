@@ -25,19 +25,6 @@
 				<!-- no posts found -->
 				<?php endif; ?>
 
-
-
-			</section>
-
-
-			<section>
-
-			</section>
-
-
-			<section>
-
 			</section>
 
 		</article>
-

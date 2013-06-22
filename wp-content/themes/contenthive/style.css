@@ -147,6 +147,11 @@ blockquote {
 p a {
   text-decoration: none;
   color: #cf5c0f;
+  width: 100%;
+  display: inline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
 }
 p a:hover {
   color: #cf5c0f;
@@ -328,10 +333,13 @@ article footer,
 .page-header {
   margin-bottom: 3em;
 }
-article header h1 {
+#main article.post {
+  margin-bottom: 6em;
+}
+article header h3 {
   margin: 0;
   font-size: 1.5em;
-  line-height: 2em;
+  line-height: 1.5em;
 }
 article header {
   margin-bottom: 1.5em;
@@ -342,7 +350,8 @@ article .entry-content {
 .entry-meta {
   clear: both;
   display: block;
-  color: #9e9c95;
+  color: #000000;
+  float: left;
 }
 /* 404 page */
 .error404 .widget {

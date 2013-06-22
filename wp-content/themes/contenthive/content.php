@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ggswp' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ggswp' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
 		<?php if ( 'post' == $post->post_type ) : ?>
 		<div class="entry-meta">
@@ -21,7 +21,6 @@
 					get_the_author()
 				);
 			?>
-			<?php edit_post_link( __( 'Edit', 'ggswp' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -37,11 +36,4 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<footer class="entry-meta">
-		<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'ggswp' ); ?></span><?php the_category( ', ' ); ?></span>
-		<span class="sep"> | </span>
-		<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'ggswp' ) . '</span>', ', ', '<span class="sep"> | </span>' ); ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'ggswp' ), __( '1 Comment', 'ggswp' ), __( '% Comments', 'ggswp' ) ); ?></span>
-		<?php edit_post_link( __( 'Edit', 'ggswp' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
-	</footer><!-- #entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
