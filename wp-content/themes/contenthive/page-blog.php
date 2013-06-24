@@ -15,7 +15,7 @@ get_header(); ?>
 		<section id="container" class="wrapper">
 			<div id="content" role="main">
 
-				<?php the_post(); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<header class="page-header">
 					<h2 class="page-title">
@@ -30,6 +30,10 @@ get_header(); ?>
 						<?php endif; ?>
 					</h2>
 				</header>
+
+				<?php endwhile; ?>
+
+				<?php endif; ?>
 
 				<?php rewind_posts(); ?>
 

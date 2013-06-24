@@ -643,6 +643,14 @@ footer address {
 
 }
 
+@media only screen and (min-width: 30em) {// 480px
+
+	.blog #container, .single #container {//BLOG PAGE
+		width: 85%;
+	}
+
+}
+
 @media only screen and (min-width: 50em) {// 800px
 
 	#access .menu {
@@ -669,11 +677,21 @@ footer address {
 	}
 
 	#container {
-		width: 77%;
+		margin: 1rem auto;
+		position: relative;
+	}
+
+	.page-id-10 #container, .page-id-9 #container, .blog #container {
+		width: 75%;
+		float: none;
 	}
 
 	.primary-sidebar {
 		font-size: 1.3em;
+		width: 98%;
+		margin: 0 auto;
+		float: none;
+
 	}
 
 	.primary-sidebar ul li {
@@ -709,29 +727,11 @@ footer address {
 
 @media only screen and (min-width: 56em) {// 864px
 
-	.primary-sidebar {
-		width: 94%;
-		clear: none;
-	}
 
-	.primary-sidebar ul {
-		margin: 0 auto;
-		clear: none;
-		width: 100%;
-	}
-
-	.primary-sidebar ul li {
-		padding: 0.87em 1.2%;
-	}
 
 }
 
 @media only screen and (min-width: 58.125em) {// 930px
-
-	#container {
-		width: 50%;
-		margin-top: 1em;
-	}
 
 	#main article section {
 		width: 46%;
@@ -740,13 +740,19 @@ footer address {
 		padding-right: 1rem;
 	}
 
+	.blog #container, .single #container {//BLOG PAGE
+		width: 78%;
+	}
 
+	.page-id-9 #main article section:nth-of-type(2) {//ABOUT PAGE
+		float: right;
+	}
 
-	.page-id-10 #main article section:first-child {
+	.page-id-10 #main article section:first-child {//SERVICES PAGE
 		width: 63%;
 	}
 
-	.page-id-10 #main article section:nth-of-type(2n+3) {
+	.page-id-10 #main article section:nth-of-type(2n+3) {//SERVICES PAGE
 		float: right;
 	}
 
@@ -787,13 +793,9 @@ footer address {
 		padding-right: 2rem;
 	}
 
-	.page-id-9 #main article section {
-		padding-top: 4rem;
-	}
-
 }
 
-@media only screen and (min-width: 80em) {// 1200px
+@media only screen and (min-width: 78em) {// 1280px
 
 	#access {
 		width: 9rem;
@@ -814,8 +816,15 @@ footer address {
 		padding: 0;
 	}
 
+	.blog #container, .single #container {
+		width: 75%;
+	}
 
-	.page-id-10 #main article section:first-child {
+	.page-id-9 #main article section {//ABOUT PAGE
+		padding-top: 10rem;
+	}
+
+	.page-id-10 #main article section:first-child {//SERVICES PAGE
 		width: 63%;
 		padding: 10rem 0rem 0rem;
 		text-align: center;
@@ -834,7 +843,7 @@ footer address {
 
 }
 
-@media only screen and (min-width: 100em) {// 1200px
+@media only screen and (min-width: 100em) {// 1600px
 
 	body {
 		max-width: 85em;

@@ -39,11 +39,31 @@
     max-width: 700px;
   }
 }
-@media only screen and (min-width: 58.125em) {
+@media only screen and (min-width: 50em) {
+  #container {
+    width: 54%;
+  }
   .primary-sidebar {
     float: right;
     width: 42%;
   }
+}
+@media only screen and (min-width: 56em) {
+  .primary-sidebar {
+    width: 94%;
+    clear: none;
+  }
+  .primary-sidebar ul {
+    margin: 0 auto;
+    clear: none;
+    width: 100%;
+  }
+  .primary-sidebar ul li {
+    padding: 0.87em 1.2%;
+  }
+}
+@media only screen and (min-width: 58.125em) {
+  
 }
 @media only screen and (min-width: 65em) {
   .primary-sidebar {
@@ -86,7 +106,7 @@
     width: 35.7rem;
   }
 }
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 78em) {
   body {
     background-image: url("img/bee-trail.png");
     background-size: 1200px;
@@ -117,13 +137,13 @@
 @media only screen and (min-width: 106.8em) {
   body {
     background-size: 1200px;
-    background-position: -44em 0em;
+    background-position: -46em 0em;
   }
 }
 @media only screen and (min-width: 112em) {
   body {
     background-size: 1200px;
-    background-position: -40em 0em;
+    background-position: -46em 0em;
   }
 }
 /* =Retina Queries

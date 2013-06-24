@@ -133,10 +133,6 @@ function ggs_enqueue_styles() {
 			wp_enqueue_style('ggs-theme-index', TEMPLATE_DIR . '/home.css', null, '', 'screen, projection');
 		}
 
-		if ( is_page( 233 ) ) {// If it's the blog page, load blog.css too.
-			wp_enqueue_style('ggs-theme-blog', TEMPLATE_DIR . '/blog.css', null, '', 'screen, projection');
-		}
-
 		if (is_tree( 30 )) {// If it's the work page or any of its children, load work.css too.
 			wp_enqueue_style('ggs-theme-work', TEMPLATE_DIR . '/work.css', null, '', 'screen, projection');
 		}

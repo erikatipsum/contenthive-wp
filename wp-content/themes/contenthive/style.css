@@ -759,6 +759,12 @@ footer address {
     margin: 0 auto;
   }
 }
+@media only screen and (min-width: 30em) {
+  .blog #container,
+  .single #container {
+    width: 85%;
+  }
+}
 @media only screen and (min-width: 50em) {
   #access .menu {
     background-color: transparent;
@@ -778,10 +784,20 @@ footer address {
     background-color: transparent;
   }
   #container {
-    width: 77%;
+    margin: 1rem auto;
+    position: relative;
+  }
+  .page-id-10 #container,
+  .page-id-9 #container,
+  .blog #container {
+    width: 75%;
+    float: none;
   }
   .primary-sidebar {
     font-size: 1.3em;
+    width: 98%;
+    margin: 0 auto;
+    float: none;
   }
   .primary-sidebar ul li {
     float: left;
@@ -809,29 +825,21 @@ footer address {
   }
 }
 @media only screen and (min-width: 56em) {
-  .primary-sidebar {
-    width: 94%;
-    clear: none;
-  }
-  .primary-sidebar ul {
-    margin: 0 auto;
-    clear: none;
-    width: 100%;
-  }
-  .primary-sidebar ul li {
-    padding: 0.87em 1.2%;
-  }
+  
 }
 @media only screen and (min-width: 58.125em) {
-  #container {
-    width: 50%;
-    margin-top: 1em;
-  }
   #main article section {
     width: 46%;
     float: left;
     clear: none;
     padding-right: 1rem;
+  }
+  .blog #container,
+  .single #container {
+    width: 78%;
+  }
+  .page-id-9 #main article section:nth-of-type(2) {
+    float: right;
   }
   .page-id-10 #main article section:first-child {
     width: 63%;
@@ -866,11 +874,8 @@ footer address {
   #main article section {
     padding-right: 2rem;
   }
-  .page-id-9 #main article section {
-    padding-top: 4rem;
-  }
 }
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 78em) {
   #access {
     width: 9rem;
     float: left;
@@ -886,6 +891,13 @@ footer address {
     right: 18%;
     width: 6%;
     padding: 0;
+  }
+  .blog #container,
+  .single #container {
+    width: 75%;
+  }
+  .page-id-9 #main article section {
+    padding-top: 10rem;
   }
   .page-id-10 #main article section:first-child {
     width: 63%;

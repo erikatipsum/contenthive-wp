@@ -29,6 +29,42 @@ article ul li:nth-child(even) {
 	background-color: rgb(244,244,244);
 }
 
+#main article section {
+	width: 100%;
+}
+
+#main article section:first-child {
+	padding-bottom: 4rem;
+}
+
+
+.services-list {
+	width: 100%;
+}
+
+.services-list li p {
+	background-color: transparent;
+	display: inline;
+}
+
+.services-list a:hover {
+	border-bottom: none;
+}
+
+.services-list li {
+	float: left;
+	clear: none;
+	width: 43%;
+	max-height: 15em;
+}
+.services-list li h5 {
+	margin: 0 auto;
+}
+
+.services-list li:nth-child(even) {
+	background-color: transparent;
+}
+
 .activate-fullscreen {
 	display: none!important;
 }
@@ -37,6 +73,38 @@ article ul li:nth-child(even) {
 	margin: 0 0px 0 10px!important;
 }
 
+@media only screen and (min-width: 58.125em) {// 930px
+
+	#main article section:nth-of-type(n+2) ul li {
+		width: 30%;
+		float: left;
+		clear: none;
+		height: 3.5rem;
+		margin: 0;
+	}
+
+	#main article section {
+		width: 90%;
+	}
+
+	.services-list li {
+		width: 30%;
+		float: left;
+		clear: none;
+
+	}
+
+}
+
+
+@media only screen and (min-width: 85.812em) {// 930px
+
+	#main article section:first-child {
+		padding-bottom: 4rem;
+		padding-top: 6rem;
+	}
+
+}
 
 /* =Retina Queries
 -------------------------------------------------------------- */
