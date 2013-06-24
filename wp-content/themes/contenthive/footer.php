@@ -9,66 +9,77 @@
 
 	<footer role="contentinfo">
 
-		<?php if( get_field( 'address_heading', 51 ) ): ?>
+		<section>
 
-			<h3><?php the_field('address_heading', 51); ?></h3>
+			<?php if( get_field( 'address_heading', 51 ) ): ?>
 
-		<?php endif; ?>
-
-		<address>
-
-			<?php the_field('address', 51); ?>
-
-		</address>
-
-		<?php if(get_field('phone_numbers', 51)): ?>
-
-			<?php if( get_field( 'phone_heading', 51 ) ): ?>
-
-				<h3><?php the_field('phone_heading', 51); ?></h3>
+				<h3><?php the_field('address_heading', 51); ?></h3>
 
 			<?php endif; ?>
 
-			<ul class="phone_numbers">
+			<address>
 
-			<?php while(has_sub_field('phone_numbers', 51)): ?>
+				<?php the_field('address', 51); ?>
 
-				<li>
+			</address>
 
-					<?php the_sub_field('number'); ?>
+		</section>
 
-				</li>
+		<section>
 
-			<?php endwhile; ?>
+			<?php if(get_field('phone_numbers', 51)): ?>
 
-			</ul>
+				<?php if( get_field( 'phone_heading', 51 ) ): ?>
 
-		<?php endif; ?>
+					<h3><?php the_field('phone_heading', 51); ?></h3>
 
+				<?php endif; ?>
 
-		<?php if(get_field('email_addresses', 51)): ?>
+				<ul class="phone_numbers">
 
-			<?php if( get_field( 'email_heading', 51 ) ): ?>
+				<?php while(has_sub_field('phone_numbers', 51)): ?>
 
-				<h3><?php the_field('email_heading', 51); ?></h3>
+					<li>
+
+						<?php the_sub_field('number'); ?>
+
+					</li>
+
+				<?php endwhile; ?>
+
+				</ul>
 
 			<?php endif; ?>
 
-			<ul class="email">
+		</section>
 
-			<?php while(has_sub_field('email_addresses', 51)): ?>
+		<section>
 
-				<li>
+			<?php if(get_field('email_addresses', 51)): ?>
 
-					<a href="mailto:<?php the_sub_field('address'); ?>"><?php the_sub_field('name'); ?></a>
+				<?php if( get_field( 'email_heading', 51 ) ): ?>
 
-				</li>
+					<h3><?php the_field('email_heading', 51); ?></h3>
 
-			<?php endwhile; ?>
+				<?php endif; ?>
 
-			</ul>
+				<ul class="email">
 
-		<?php endif; ?>
+				<?php while(has_sub_field('email_addresses', 51)): ?>
+
+					<li>
+
+						<a href="mailto:<?php the_sub_field('address'); ?>"><?php the_sub_field('name'); ?></a>
+
+					</li>
+
+				<?php endwhile; ?>
+
+				</ul>
+
+			<?php endif; ?>
+
+		</section>
 
 		<figure class="footer_logo">
 		</figure>

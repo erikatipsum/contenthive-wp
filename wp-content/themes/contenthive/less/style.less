@@ -233,8 +233,8 @@ header {
 #access ul ul ul {left:100%; top:0}
 #access ul ul a {background:@link; line-height:1em; padding:1em 1.5em; width:10em; height:auto}
 #access li:hover >a,
-#access ul ul:hover >a{background:@link}
-#access ul ul a:hover{background:@link}
+#access ul:hover >a{background:@link}
+#access ul a:hover{background:@link}
 #access ul li:hover >ul{display:block}
 
 /* =Content
@@ -268,6 +268,12 @@ article .entry-content {margin-bottom: 0}
 /* Notices */
 .post .notice,
 .error404 #searchform{background:@navbg; display:block; padding:1.5em 1em}
+
+/* Comments | CURRENTLY DISABLED */
+
+#comments {
+	display: none;
+}
 
 /* Image Attachments */
 #main #container.image-attachment {width: 100%}
@@ -391,7 +397,7 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, 
 	vertical-align: middle;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 50em) {
   .js #nav {
     position: relative;
   }
@@ -619,6 +625,244 @@ footer address {
 
 #footer-nav-ul li:last-child a {
 	margin-bottom: 1.3em;
+}
+
+
+@media only screen and (min-width: 24.18em) {// 387px
+
+	.primary-sidebar ul li figure a figcaption {
+		font-size: .9em;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.primary-sidebar ul li {
+		float: none;
+		margin: 0 auto;
+	}
+
+}
+
+@media only screen and (min-width: 50em) {// 800px
+
+	#access .menu {
+		background-color: transparent;
+	}
+
+	#nav li {
+		width: auto;
+	}
+
+	#nav li a {
+		width: auto;
+		padding: .875em 1.2em;
+	}
+
+
+	#nav li a:hover {
+		background-color: transparent;
+		color: @navbg;
+	}
+
+	#nav li a:active {
+		background-color: transparent;
+	}
+
+	#container {
+		width: 77%;
+	}
+
+	.primary-sidebar {
+		font-size: 1.3em;
+	}
+
+	.primary-sidebar ul li {
+		float: left;
+		padding: 0.87em .5%;
+		max-width: 340px;
+	}
+
+	footer section {
+		float: left;
+		clear:right;
+		width: 33.333333333333333333%;
+		margin-bottom: 1em;
+	}
+
+	.footer_logo {
+		float:left;
+		clear:none;
+		margin: .6em 3.333333% 0 5.555555%;
+	}
+
+	.footer-nav {
+		float: left;
+		clear: none;
+	}
+
+	.footer-nav li {
+		float: left;
+		clear: none;
+	}
+
+}
+
+@media only screen and (min-width: 56em) {// 864px
+
+	.primary-sidebar {
+		width: 94%;
+		clear: none;
+	}
+
+	.primary-sidebar ul {
+		margin: 0 auto;
+		clear: none;
+		width: 100%;
+	}
+
+	.primary-sidebar ul li {
+		padding: 0.87em 1.2%;
+	}
+
+}
+
+@media only screen and (min-width: 58.125em) {// 930px
+
+	#container {
+		width: 50%;
+		margin-top: 1em;
+	}
+
+	#main article section {
+		width: 46%;
+		float: left;
+		clear: none;
+		padding-right: 1rem;
+	}
+
+
+
+	.page-id-10 #main article section:first-child {
+		width: 63%;
+	}
+
+	.page-id-10 #main article section:nth-of-type(2n+3) {
+		float: right;
+	}
+
+}
+
+@media only screen and (min-width: 65em) {// 1040px
+
+	.footer_logo {
+		margin: .6em 3.333333% 0 8.555555%;
+	}
+
+}
+
+@media only screen and (min-width: 70em) {// 1120px
+
+	.logo {
+		margin: 0.23em 0em .5em 3.48em;
+	}
+
+	#access {
+		margin: 3em 0 3em 4.18em;
+		width: 28rem;
+	}
+
+	#container {
+		width: 55%;
+	}
+
+	#main article, h2 {
+		padding: 0 5%;
+	}
+
+	.primary-sidebar {
+		margin-left: 3.48rem;
+	}
+
+	#main article section {
+		padding-right: 2rem;
+	}
+
+	.page-id-9 #main article section {
+		padding-top: 4rem;
+	}
+
+}
+
+@media only screen and (min-width: 80em) {// 1200px
+
+	#access {
+		width: 9rem;
+		float: left;
+		clear: both;
+	}
+
+	#main article section {
+		width: 42%;
+		padding-top: 1rem;
+	}
+
+	#main>h2 {
+		position: absolute;
+		top: 3rem;
+		right: 18%;
+		width: 6%;
+		padding: 0;
+	}
+
+
+	.page-id-10 #main article section:first-child {
+		width: 63%;
+		padding: 10rem 0rem 0rem;
+		text-align: center;
+		float: none;
+		margin: 0 auto;
+	}
+
+
+	footer {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+}
+
+@media only screen and (min-width: 100em) {// 1200px
+
+	body {
+		max-width: 85em;
+		margin: 0 auto;
+	}
+
+	.primary-sidebar {
+		width: 100%;
+	}
+
+	.primary-sidebar {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.primary-sidebar ul li {
+		max-width: 285px;
+	}
+
+	#container {
+		margin-left: 14%;
+	}
+
+	footer {
+		box-sizing: border-box;
+		padding: 0 10%;
+	}
+
 }
 
 

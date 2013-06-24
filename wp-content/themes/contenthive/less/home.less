@@ -5,8 +5,11 @@
 @index_bg: url("img/bee-trail.png");
 @logo_mark_color: url("img/logo-mark-color-small.png");
 @logo_mark_color_2x: url("img/logo-mark-color-small@2x.png");
+@logo_color: url("img/logo-color.png");
 @tagline_small: url("img/tagline-small.png");
 @tagline_small_2x: url("img/tagline-small@2x.png");
+@tagline_large: url("img/tagline-large.png");
+@tagline_large_2x: url("img/tagline-large@2x.png");
 
 /* ==========================================================================
    Homepage styles
@@ -48,9 +51,137 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	width: 100%;
-	margin: 0.5em 0em 1.2em;
+	margin: 0.5rem 0rem 1.2rem;
 	height: 0;
 	padding-bottom: 7%;
+}
+
+@media only screen and (min-width: 40em) {// 640px
+
+	.tagline {
+		background-image: @tagline_large;
+		max-width: 700px;
+	}
+
+}
+
+@media only screen and (min-width: 58.125em) {// 930px
+
+	.primary-sidebar {
+		float: right;
+		width: 42%;
+	}
+
+}
+
+@media only screen and (min-width: 65em) {// 1040px
+
+	.primary-sidebar {
+		width: 38%;
+	}
+
+}
+
+@media only screen and (min-width: 70em) {// 1120px
+
+	.logo {
+		background-image: @logo_color;
+		width: 5.6em;
+		height: auto;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0.23em 0em .5em 3.48em;
+	}
+
+	.hero .lrg > img {
+		max-width: 29.7rem;
+		float: right;
+		clear: both;
+		padding-right: 1rem;
+	}
+
+	#container p {
+		padding-left: 5rem;
+	}
+
+	.tagline {
+		margin-bottom: 1rem;
+		float: right;
+		clear: both;
+		max-width: 38rem;
+		padding: 0 0 2.1rem 0;
+	}
+
+	.primary-sidebar {
+		width: 35%;
+	}
+
+	.primary-sidebar ul li {
+		max-width: 390px;
+	}
+
+	#main article {
+		width: 35.7rem;
+	}
+
+}
+
+@media only screen and (min-width: 80em) {// 1200px
+
+	body {
+		background-image: @index_bg;
+		background-size: 1200px;
+		background-repeat: no-repeat;
+		background-position: -50em -21em;
+	}
+	#container {
+		margin-left: 8%;
+		margin-bottom: 15rem;
+		position: relative;
+		bottom: 5rem;
+	}
+
+	.primary-sidebar {
+		top: 6rem;
+		position: absolute;
+		right: 1rem;
+	}
+
+	#main article section {
+		width: 33%;
+	}
+
+
+
+}
+
+@media only screen and (min-width: 100em) {// 1710px
+
+
+	body {
+		background-size: 1200px;
+		background-position: -50em -15em;
+	}
+
+}
+
+@media only screen and (min-width: 106.8em) {// 1710px
+
+	body {
+		background-size: 1200px;
+		background-position: -44em 0em;
+	}
+
+}
+
+@media only screen and (min-width: 112em) {// 1710px
+
+	body {
+		background-size: 1200px;
+		background-position: -40em 0em;
+	}
+
 }
 
 /* =Retina Queries
@@ -75,3 +206,16 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 40em),
+only screen and (   min--moz-device-pixel-ratio: 2) and (min-width: 40em),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (min-width: 40em),
+only screen and (        min-device-pixel-ratio: 2) and (min-width: 40em),
+only screen and (                min-resolution: 192dpi) and (min-width: 40em),
+only screen and (                min-resolution: 2dppx) and (min-width: 40em) {
+
+  .tagline {
+  	background-image: @tagline_large_2x;
+  }
+
+}

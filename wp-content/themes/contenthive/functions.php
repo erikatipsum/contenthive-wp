@@ -129,8 +129,12 @@ function ggs_enqueue_styles() {
 		// wp_enqueue_style('ggs', TEMPLATE_DIR . '/less/style.less', null, '', 'screen, projection');
 		wp_enqueue_style('ggs-base', TEMPLATE_DIR . '/css/style.ggs.css', null, '', 'screen, projection');
 		wp_enqueue_style('ggs-theme', TEMPLATE_DIR . '/style.css', null, '', 'screen, projection');
-		if ( is_page(7) ) {// If it's the homepage, load home.css too.
+		if ( is_page( 7 ) ) {// If it's the homepage, load home.css too.
 			wp_enqueue_style('ggs-theme-index', TEMPLATE_DIR . '/home.css', null, '', 'screen, projection');
+		}
+
+		if ( is_page( 233 ) ) {// If it's the blog page, load blog.css too.
+			wp_enqueue_style('ggs-theme-blog', TEMPLATE_DIR . '/blog.css', null, '', 'screen, projection');
 		}
 
 		if (is_tree( 30 )) {// If it's the work page or any of its children, load work.css too.
