@@ -828,12 +828,6 @@ footer address {
   
 }
 @media only screen and (min-width: 58.125em) {
-  #main article section {
-    width: 46%;
-    float: left;
-    clear: none;
-    padding-right: 1rem;
-  }
   .blog #container,
   .single #container {
     width: 78%;
@@ -841,10 +835,35 @@ footer address {
   .page-id-9 #main article section:nth-of-type(2) {
     float: right;
   }
+  .page-id-10 #main article section {
+    width: 50%;
+    float: left;
+    padding-right: 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
   .page-id-10 #main article section:first-child {
     width: 63%;
+    padding: 0;
   }
   .page-id-10 #main article section:nth-of-type(2n+3) {
+    float: right;
+    padding-left: 1rem;
+  }
+  .page-id-9 #main article section {
+    width: 43%;
+    float: left;
+    padding-right: 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .page-id-9 #main article section:nth-child(even) {
     float: right;
   }
 }
@@ -871,19 +890,12 @@ footer address {
   .primary-sidebar {
     margin-left: 3.48rem;
   }
-  #main article section {
-    padding-right: 2rem;
-  }
 }
 @media only screen and (min-width: 78em) {
   #access {
     width: 9rem;
     float: left;
     clear: both;
-  }
-  #main article section {
-    width: 42%;
-    padding-top: 1rem;
   }
   #main > h2 {
     position: absolute;
@@ -940,8 +952,10 @@ footer address {
 /* =Retina Queries
 -------------------------------------------------------------- */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .logo,
   .footer_logo {
     background-image: url("img/logo-mark-color-small@2x.png");
   }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 70em), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 70em), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 70em), only screen and (min-device-pixel-ratio: 2) and (min-width: 70em), only screen and (min-resolution: 192dpi) and (min-width: 70em), only screen and (min-resolution: 2dppx) and (min-width: 70em) {
+  
 }

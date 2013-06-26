@@ -20,32 +20,43 @@ article ul li {
 article ul li:nth-child(even) {
   background-color: #f4f4f4;
 }
-#main article section {
-  width: 100%;
-}
 #main article section:first-child {
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 .services-list {
+  float: none;
+  clear: both;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 24rem;
+}
+.services-list ul {
   width: 100%;
 }
-.services-list li p {
+.services-list ul li {
   background-color: transparent;
-  display: inline;
 }
-.services-list a:hover {
+.services-list ul li a:hover {
   border-bottom: none;
 }
-.services-list li {
+.services-list ul li {
   float: left;
   clear: none;
   width: 43%;
-  max-height: 15em;
+  max-width: 390px;
 }
-.services-list li h5 {
+.services-list ul li:nth-child(even) {
+  float: right;
+}
+.services-list ul li a img {
+  display: block;
+  max-width: 100%;
+}
+.services-list ul li h5 {
   margin: 0 auto;
+  font-size: .8em;
 }
-.services-list li:nth-child(even) {
+.services-list ul li:nth-child(even) {
   background-color: transparent;
 }
 .activate-fullscreen {
@@ -54,27 +65,124 @@ article ul li:nth-child(even) {
 .slideshow-nav a.slideshow-next {
   margin: 0 0px 0 10px!important;
 }
-@media only screen and (min-width: 58.125em) {
-  #main article section:nth-of-type(n+2) ul li {
-    width: 30%;
-    float: left;
-    clear: none;
-    height: 3.5rem;
-    margin: 0;
+.client-list ul li {
+  margin: 0;
+}
+@media only screen and (min-width: 24.18em) {
+  .services-list ul li {
+    width: 45%;
   }
-  #main article section {
+}
+@media only screen and (min-width: 28em) {
+  .services-list {
+    padding-bottom: 28rem;
+  }
+}
+@media only screen and (min-width: 35em) {
+  .services-list {
+    padding-bottom: 30rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .services-list {
+    padding-bottom: 34rem;
+  }
+}
+@media only screen and (min-width: 44em) {
+  .services-list {
+    padding-bottom: 35rem;
+  }
+}
+@media only screen and (min-width: 47em) {
+  .services-list {
+    padding-bottom: 40rem;
+  }
+}
+@media only screen and (min-width: 47.8em) {
+  .services-list ul li h5 {
+    font-size: 1em;
+  }
+  .services-list {
     width: 90%;
+    padding-bottom: 36rem;
   }
-  .services-list li {
-    width: 30%;
+  .client-list {
+    width: 50%;
     float: left;
+    font-size: .8em;
+  }
+  .client-list:nth-of-type(even) {
+    float: right;
+  }
+}
+@media only screen and (min-width: 53em) {
+  .services-list {
+    padding-bottom: 23rem;
+  }
+}
+@media only screen and (min-width: 58.125em) {
+  .services-list {
+    width: 100%;
+  }
+  .services-list ul li {
+    width: 33.3333333333333%;
     clear: none;
+    float: left;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.6rem;
+  }
+  .services-list ul li:nth-child(even) {
+    float: left;
   }
 }
 @media only screen and (min-width: 85.812em) {
   #main article section:first-child {
     padding-bottom: 4rem;
     padding-top: 6rem;
+  }
+}
+@media only screen and (min-width: 78em) {
+  #main article {
+    padding-top: 14rem;
+  }
+  #main article section:first-child {
+    width: 50%;
+    float: left;
+    clear: none;
+    padding-top: 1.88rem;
+    padding-right: 2rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .services-list {
+    width: 50%;
+    float: right;
+    clear: none;
+    padding-bottom: 5rem;
+  }
+  .services-list ul li {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 88em) {
+  .client-list ul li {
+    width: 100%;
+    float: left;
+    clear: none;
+    font-size: 1.2em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 /* =Retina Queries

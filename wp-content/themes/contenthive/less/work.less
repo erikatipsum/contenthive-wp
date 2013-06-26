@@ -20,6 +20,10 @@ ul {
 	list-style: none;
 }
 
+// #main article section {
+// 	width: 100%;
+// }
+
 article ul li {
 	margin: .8em 0;
 	padding: .5em;
@@ -29,39 +33,52 @@ article ul li:nth-child(even) {
 	background-color: rgb(244,244,244);
 }
 
-#main article section {
-	width: 100%;
-}
-
 #main article section:first-child {
-	padding-bottom: 4rem;
+	padding-bottom: 1rem;
 }
-
 
 .services-list {
+	float: none;
+	clear: both;
+	position: relative;
+	margin: 0 auto;
+	padding-bottom: 24rem;
+}
+
+.services-list ul {
 	width: 100%;
 }
 
-.services-list li p {
+.services-list ul li {
 	background-color: transparent;
-	display: inline;
 }
 
-.services-list a:hover {
+.services-list ul li a:hover {
 	border-bottom: none;
 }
 
-.services-list li {
+.services-list ul li {
 	float: left;
 	clear: none;
 	width: 43%;
-	max-height: 15em;
-}
-.services-list li h5 {
-	margin: 0 auto;
+	max-width: 390px;
 }
 
-.services-list li:nth-child(even) {
+.services-list ul li:nth-child(even) {
+	float: right;
+}
+
+.services-list ul li a img {
+	display: block;
+	max-width: 100%;
+}
+
+.services-list ul li h5 {
+	margin: 0 auto;
+	font-size: .8em;
+}
+
+.services-list ul li:nth-child(even) {
 	background-color: transparent;
 }
 
@@ -73,26 +90,114 @@ article ul li:nth-child(even) {
 	margin: 0 0px 0 10px!important;
 }
 
+.client-list ul li {
+	margin: 0;
+}
+
+@media only screen and (min-width: 24.18em) {// 387px
+
+	.services-list ul li {
+		width: 45%;
+	}
+
+}
+
+@media only screen and (min-width: 28em) {// 480px
+
+	.services-list {
+		padding-bottom: 28rem;
+	}
+
+}
+
+
+@media only screen and (min-width: 35em) {// 480px
+
+	.services-list {
+		padding-bottom: 30rem;
+	}
+
+}
+
+@media only screen and (min-width: 40em) {// 480px
+
+	.services-list {
+		padding-bottom: 34rem;
+	}
+
+}
+
+@media only screen and (min-width: 44em) {// 480px
+
+	.services-list {
+		padding-bottom: 35rem;
+	}
+
+}
+
+@media only screen and (min-width: 47em) {// 480px
+
+	.services-list {
+		padding-bottom: 40rem;
+	}
+
+}
+
+@media only screen and (min-width: 47.8em) {// 765px
+
+	.services-list ul li h5 {
+		font-size: 1em;
+	}
+
+	.services-list {
+		width: 90%;
+		padding-bottom: 36rem;
+	}
+
+	.client-list {
+		width: 50%;
+		float: left;
+		font-size: .8em;
+	}
+
+	.client-list:nth-of-type(even) {
+		float: right;
+	}
+
+}
+
+
+@media only screen and (min-width: 53em) {// 480px
+
+	.services-list {
+		padding-bottom: 23rem;
+	}
+
+}
+
 @media only screen and (min-width: 58.125em) {// 930px
 
-	#main article section:nth-of-type(n+2) ul li {
-		width: 30%;
-		float: left;
+	.services-list {
+		width: 100%;
+	}
+
+	.services-list ul li {
+		width: 33.3333333333333%;
 		clear: none;
-		height: 3.5rem;
+		float: left;
 		margin: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0.6rem;
 	}
 
-	#main article section {
-		width: 90%;
-	}
-
-	.services-list li {
-		width: 30%;
+	.services-list ul li:nth-child(even) {
 		float: left;
-		clear: none;
-
 	}
+
 
 }
 
@@ -105,6 +210,56 @@ article ul li:nth-child(even) {
 	}
 
 }
+
+@media only screen and (min-width: 78em) {// 1280px
+
+	#main article {
+		padding-top: 14rem;
+	}
+
+	#main article section:first-child {
+		width: 50%;
+		float: left;
+		clear: none;
+		padding-top: 1.88rem;
+		padding-right: 2rem;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.services-list {
+		width: 50%;
+		float: right;
+		clear: none;
+		padding-bottom: 5rem;
+	}
+
+	.services-list ul li {
+		width: 50%;
+	}
+
+}
+
+@media only screen and (min-width: 88em) {// 1408px
+
+	.client-list ul li {
+		width: 100%;
+		float: left;
+		clear: none;
+		font-size: 1.2em;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+
+}
+
 
 /* =Retina Queries
 -------------------------------------------------------------- */
