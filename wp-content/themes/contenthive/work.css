@@ -140,12 +140,6 @@ article ul li:nth-child(even) {
     float: left;
   }
 }
-@media only screen and (min-width: 85.812em) {
-  #main article section:first-child {
-    padding-bottom: 4rem;
-    padding-top: 6rem;
-  }
-}
 @media only screen and (min-width: 78em) {
   #main article {
     padding-top: 14rem;
@@ -171,6 +165,16 @@ article ul li:nth-child(even) {
   .services-list ul li {
     width: 50%;
   }
+  #main > h2 {
+    width: 20%;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 85.812em) {
+  #main article section:first-child {
+    padding-bottom: 4rem;
+    padding-top: 6rem;
+  }
 }
 @media only screen and (min-width: 88em) {
   .client-list ul li {
@@ -184,6 +188,20 @@ article ul li:nth-child(even) {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
   }
+}
+#main .work-child {
+  padding-top: 0;
+}
+#main .work-child .slideshow {
+  margin: 0 auto;
+  float: none;
+  padding-top: 0;
+}
+.enlarge {
+  text-align: center;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
 }
 /* =Retina Queries
 -------------------------------------------------------------- */

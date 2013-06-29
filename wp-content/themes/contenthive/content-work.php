@@ -47,7 +47,7 @@
 
 			<section class="client-list">
 
-				<h5>Ellen Berkovitch</h5>
+				<h5>Ellen Berkovitch<br><br></h5>
 
 				<?php if(get_field('ellens_clients')): ?>
 
@@ -71,7 +71,7 @@
 
 			<section class="client-list">
 
-				<h5>Michelle Mosser</h5>
+				<h5>Michelle Mosser / <br>GraceCommunications</h5>
 
 				<?php if(get_field('michelles_clients')): ?>
 

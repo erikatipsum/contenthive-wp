@@ -59,6 +59,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'IcoMoonRegular';
+    src: url('../../plugins/portfolio-slideshow-pro/css/icomoon-webfont.eot');
+    src: url('../../plugins/portfolio-slideshow-pro/css/icomoon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../plugins/portfolio-slideshow-pro/css/icomoon-webfont.woff') format('woff'),
+         url('../../plugins/portfolio-slideshow-pro/css/icomoon-webfont.ttf') format('truetype'),
+         url('../../plugins/portfolio-slideshow-pro/css/icomoon-webfont.svg#IcoMoonRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 
 /* =Variables
@@ -651,6 +663,29 @@ footer address {
 
 }
 
+@media only screen and (min-width: 32em) {// 610px
+
+	.primary-sidebar ul li {
+		float: left;
+		margin: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 50%;
+		padding-right:3%;
+		padding-left: 0;
+	}
+
+	.primary-sidebar ul li:nth-child(even) {
+		padding-right: 0;
+		padding-left: 3%;
+		float: right;
+	}
+
+}
+
 @media only screen and (min-width: 50em) {// 800px
 
 	#access .menu {
@@ -688,10 +723,16 @@ footer address {
 
 	.primary-sidebar {
 		font-size: 1.3em;
-		width: 98%;
+		width: 100%;
 		margin: 0 auto;
-		float: none;
+	}
 
+	.primary-sidebar ul {
+		max-width: 42rem;
+		float:none;
+		margin: 0 auto;
+		position: relative;
+		clear: none;
 	}
 
 	.primary-sidebar ul li {
@@ -813,7 +854,7 @@ footer address {
 		padding: 0 5%;
 	}
 
-	.primary-sidebar {
+	.home .primary-sidebar {
 		margin-left: 3.48rem;
 	}
 
@@ -851,6 +892,18 @@ footer address {
 		margin: 0 auto;
 	}
 
+	.primary-sidebar ul {
+		max-width: 85em;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.primary-sidebar ul li, .primary-sidebar ul li:nth-child(even) {
+		float: left;
+		width: 25%;
+		padding: 2rem 1%;
+	}
 
 	footer {
 		-webkit-box-sizing: border-box;
@@ -867,19 +920,6 @@ footer address {
 	body {
 		max-width: 85em;
 		margin: 0 auto;
-	}
-
-	.primary-sidebar {
-		width: 100%;
-	}
-
-	.primary-sidebar {
-		width: 100%;
-		margin-left: 0;
-	}
-
-	.primary-sidebar ul li {
-		max-width: 285px;
 	}
 
 	#container {

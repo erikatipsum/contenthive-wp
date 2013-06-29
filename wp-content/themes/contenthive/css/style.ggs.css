@@ -74,7 +74,7 @@ img{ border:0;  -ms-interpolation-mode:bicubic; }
 *type size presets
 *
 */
-body{ /* 16px / 24px */ font-size:1em;  line-height:1.5em; }
+body{ /* 16px / 24px */ font-size:1em;  line-height: 1.2em; }
 .small{ /* 13px / 18px */ font-size:0.8125em;  line-height:1.3846153846153846em; }
 .normal, h3, h4, h5, h6 { /* 16px / 24px */ font-size:1em;  line-height:1.5em;  /* 24 */}
 .large, h2, h1{ /* 26 / 36px */ font-size:1.625em;  line-height:1.3846153846153846em; }

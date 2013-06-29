@@ -10,9 +10,9 @@
 		<h5><a href="/contenthive/work"><< Work</a></h5>
 		<h2><?php the_title(); ?></h2>
 
-		<article>
+		<article class="work-child">
 
-			<section>
+			<section class="slideshow">
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<!-- post -->
@@ -24,6 +24,8 @@
 				<?php else: ?>
 				<!-- no posts found -->
 				<?php endif; ?>
+
+				<h4 class="enlarge">Click an item to enlarge</h4>
 
 			</section>
 
